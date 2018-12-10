@@ -24,24 +24,22 @@
 
     <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
+    {% if jekyll.environment == 'production' %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', '{{site.google_analytics}}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
 </head>
-
-{% if jekyll.environment == 'production' %}
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '{{site.google_analytics}}', 'auto');
-  ga('send', 'pageview');
-</script>
-{% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
 <body class="{{ layout }}">
-
 
     <!-- Begin Menu Navigation
 ================================================== -->
@@ -120,8 +118,8 @@
     <div class="site-content">
         <div class="container">
 
-            <!-- Site Title
-================================================== -->
+            <!-- Site Title-->
+            <!--================================================== -->
             <div class="mainheading">
                 <h1 class="sitetitle">{{ site.name }}</h1>
                 <p class="lead">
@@ -131,14 +129,14 @@
 
 
 
-            <!-- Content
-================================================== -->
+            <!-- Content-->
+            <!--================================================== -->
             <div class="main-content">
                 {{ content }}
             </div>
 
-            <!-- Bottom Alert Bar
-================================================== -->
+            <!-- Bottom Alert Bar -->
+            <!-- ================================================== -->
             <!-- <div class="alertbar">
                 <div class="container text-center">
                     <span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b>
@@ -154,61 +152,66 @@
                 </div>
             </div> -->
 
-        </div>
-        <!-- /.container>
-    
-<!-- Categories Jumbotron
-================================================== -->
-        <div class="jumbotron fortags">
-            <div class="d-md-flex h-100">
-                <div class="col-md-4 transpdark align-self-center text-center h-100">
-                    <div class="d-md-flex align-items-center justify-content-center h-100">
-                        <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
-                    </div>
-                </div>
-                <div class="col-md-8 p-5 align-self-center text-center">
-                    {% assign tags_list = site.categories %}
-                    {% if tags_list.first[0] == null %}
-                    {% for tag in tags_list %}
-                    <a href="{{ site.baseurl }}/category/{{ tag }}">{{ tag | capitalize }} {{ site.tags[tag].size }}</a>
-                    {% endfor %}
-                    {% else %}
-                    {% for tag in tags_list %}
-                    <a href="{{ site.baseurl }}/category/{{ tag[0] }}">{{ tag[0] | capitalize }} ({{ tag[1].size }})</a>
-                    {% endfor %}
-                    {% endif %}
-                    {% assign tags_list = nil %}
+            <!-- </div> -->
+            <!-- /.container>-->
 
+            <!-- Categories Jumbotron-->
+            <!--==================================================-->
+            <div class="jumbotron fortags">
+                <div class="d-md-flex h-100">
+                    <div class="col-md-4 transpdark align-self-center text-center h-100">
+                        <div class="d-md-flex align-items-center justify-content-center h-100">
+                            <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-8 p-5 align-self-center text-center">
+                        {% assign tags_list = site.categories %}
+                        {% if tags_list.first[0] == null %}
+                        {% for tag in tags_list %}
+                        <a href="{{ site.baseurl }}/category/{{ tag }}">{{ tag | capitalize }} {{
+                            site.tags[tag].size
+                            }}</a>
+                        {% endfor %}
+                        {% else %}
+                        {% for tag in tags_list %}
+                        <a href="{{ site.baseurl }}/category/{{ tag[0] }}">{{ tag[0] | capitalize }} ({{
+                            tag[1].size
+                            }})</a>
+                        {% endfor %}
+                        {% endif %}
+                        {% assign tags_list = nil %}
+
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 
-        <!-- Begin Footer
+            <!-- Begin Footer
 ================================================== -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                        Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
-                    </div>
-                    <!-- <div class="col-md-6 col-sm-6 text-center text-lg-right">
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                            Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
+                        </div>
+                        <!-- <div class="col-md-6 col-sm-6 text-center text-lg-right">
                         <a target="_blank" href="https://www.wowthemes.net">Mediumish Theme</a> by WowThemes.net
                     </div> -->
+                    </div>
                 </div>
-            </div>
-        </footer>
-        <!-- End Footer
+            </footer>
+            <!-- End Footer
 ================================================== -->
 
 
+        </div>
+        <!-- /.site-content>-->
+
+        <!-- Bootstrap core JavaScript -->
+        <!--================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
     </div>
-    <!-- /.site-content>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
 
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
