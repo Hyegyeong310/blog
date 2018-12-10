@@ -16,3 +16,5 @@ group :jekyll_plugins do
     gem 'jekyll-archives'
     gem 'jekyll-paginate'
 end
+
+gem 'jekyll-admin', group: :jekyll_plugins
