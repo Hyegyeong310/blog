@@ -1,22 +1,45 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+# Site
+name: "HyeGyeong's Blog"
+description: "프로그래밍 공부 정리용 블로그"
+meta_description: ""
+logo: "assets/images/logo.png"
+favicon: "assets/images/logo.png"
+baseurl: ""
+# google_analytics: "UA-46278016-1"
+disqus: "demowebsite"
+# mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
-# Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             ''
-paginate:            5
+# Authors
+authors:
+  HyeGyeong:
+    name: HyeGyeong
+    display_name: HyeGyeong
+    # gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: hyegyeong310@gmail.com
+    web: https://hyegyeong310.github.io/blog/
+    twitter: "" # https://twitter.com/wowthemesnet
+    description: "프로그래머를 꿈꾸며 JavaScript 공부 중"
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
 
-# Custom vars
-version:             1.0.0
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: "/category/:name/"
+
+# Pagination
+paginate: 6
+paginate_path: /page:num/
+
+# Other
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
