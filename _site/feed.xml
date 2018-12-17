@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>프로그래밍 공부 정리용 블로그</description>
+    <link>http://localhost:4000/blog/</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 17 Dec 2018 12:54:46 +0900</pubDate>
+    <lastBuildDate>Mon, 17 Dec 2018 12:54:46 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>GitHub 쉽게 사용하자 [많이 쓰는 명령어 정리]</title>
+        <description>&lt;p&gt;GitHub을 처음 접하면 정말 이게 뭔가 싶고 마냥 어렵다.&lt;br /&gt;
+컴퓨터의 UI처럼 눈에 보이는 것도 아니고 글만 보고 ‘음…지금 파일이 이래저래 됐겠구나’라고 예측해야 한다.&lt;br /&gt;
+add, commit, push 등 많이 쓰는 명령어는 그런 생각도 안 하고 이젠 편하게 쓸 수 있는 줄 알았는데 한 번씩 에러가 뜨는 경우가 있다.&lt;br /&gt;
+이런 일을 겪고 나면 어렵게 작성해 둔 파일들이 잘못될까봐 커멘드 라인에 한 줄 한 줄 적는 게 조심스럽다.&lt;br /&gt;
+그리고 add, commit, push 등 자주 쓰는 명령어 외에는 자꾸 까먹는다ㅜㅜ 또 써야되는데…&lt;br /&gt;
+그래서 Code States의 자료들로 git 명령어를 정리 하기로 했다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;command-line이-뭐야&quot;&gt;“Command Line이 뭐야?”&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/terminal.png&quot; alt=&quot;walking&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;명령 줄 인터페이스(CLI, Command line interface) 또는 명령어 인터페이스는 가상 터미널또는 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식을 뜻한다. 즉, 작업 명령은 사용자가 컴퓨터 키보드 등을 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다.
+출처: 위키백과&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Mac에서는 ‘Terminal’, Window에서는 ‘명령 프롬프트’이라고 하면 친숙하다.
+우리가 git을 이용하기 위해서는 Command Line 사용법을 알아야 한다.&lt;br /&gt;
+sourcetree처럼 git을 시각적으로 보여줘서 쉽게 사용할 수 있게 도와주는 도구도 있지만 CLI(Command Line Interface)로 계속 연습해야 더 빠르고 익숙하게 다룰 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;git은-뭐고-github은-뭐야&quot;&gt;“Git은 뭐고 Github은 뭐야?”&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git
+컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 분산 버전 관리 시스템이다.
+출처: 위키백과&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;github
+분산 버전 관리 툴인 깃(Git)을 사용하는 프로젝트를 지원하는 웹호스팅 서비스이다.
+출처: 위키백과&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;git은 프로젝트의 어떤 부분도 겹쳐쓰지 않게 프로젝트의 변경을 관리하는 버전관리 소프트웨어이고 github은 git 유저들의 커뮤니티라고 생각하면 된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;기본-용어들&quot;&gt;“기본 용어들”&lt;/h2&gt;
+
+&lt;h4 id=&quot;repository&quot;&gt;Repository&lt;/h4&gt;
+
+&lt;p&gt;뜻 그대로 저장소를 뜻한다. 버전을 관리할 때 일종의 ‘스냅샷’을 찍는데 그 스냅샷들을 시간의 흐름에 따라 저장해주는 곳이다.&lt;/p&gt;
+
+&lt;h4 id=&quot;staging-area&quot;&gt;staging area&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/stagingArea.png&quot; alt=&quot;walking&quot; /&gt;&lt;br /&gt;
+어떤 변경사항이 저장소에 커밋되기 전에, 반드시 거쳐야만 하는 중간단계이다.
+여러 파일들이 변경된 경우, 일부만 선택하여 올릴 수 있어서 좋다.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-명령어를-알아보자&quot;&gt;“Git 명령어를 알아보자”&lt;/h2&gt;
+
+&lt;p&gt;git 명령어는 아주 많지만 그 중에서 기본적으로 사용하는 것은 몇 가지 안 된다. 외워서 사용하면 편하다.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-init&quot;&gt;git init&lt;/h4&gt;
+
+&lt;p&gt;git 저장소를 초기화한다. 저장소 또는 디렉토리에서 이 명령어를 사용해야 git의 관리를 받을 수 있다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;git-remote&quot;&gt;git remote&lt;/h4&gt;
+
+&lt;p&gt;기존에 있던 원격 저장소를 clone해서 가져온 게 아니라면 git init, [같은 이름의 디렉토리] 등으로 github의 저장소와 연결된 것이 아니다. 이 부분에서 많이 헷갈릴 수 있다. remote는 저장소와 연결해준다 또는 git에게 알려준다고 생각하고 쓰시길.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote add origin [repository 주소]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;git-init-취소&quot;&gt;git init 취소&lt;/h4&gt;
+
+&lt;p&gt;git 사용법이 익숙하지 않아서 엉뚱한 디렉토리를 git init 했을 때 필요한 명령어다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rm -r .git&lt;/code&gt;&lt;br /&gt;
+git init을 생성하면 ‘.git’ 디렉토리가 생기는데 이 명령어를 쓰면 ‘.git’ 디렉토리를 삭제하여 초기화를 취소해준다.
+위의 명령어가 안 되면&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo rm -r .git&lt;/code&gt; 해보시길.&lt;/p&gt;
+
+&lt;h4 id=&quot;branch&quot;&gt;branch&lt;/h4&gt;
+
+&lt;p&gt;하나의 저장소를 가지처럼 나눠서 관리할 수 있다. branch 기능 덕분에 협업을 편하게 할 수 있다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch&lt;/code&gt; // 현재 저장소의 branch를 모두 볼 수 있다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch [name]&lt;/code&gt; // [name] branch를 생성해준다.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-add&quot;&gt;git add&lt;/h4&gt;
+
+&lt;p&gt;staging area에 올려두는 명령어다. 그냥 올려두기만 한 것 뿐이지 저장소에 닿지도 않았다. git add -&amp;gt; commit -&amp;gt; push를 해야 내 계정의 github에서 볼 수 있다는 것을 꼭 기억하라.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt; // 변경사항 모두&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git add [file or directory]&lt;/code&gt; // 선택한 file, directory만&lt;/p&gt;
+
+&lt;h4 id=&quot;git-commit&quot;&gt;git commit&lt;/h4&gt;
+
+&lt;p&gt;커밋을 하는 그 시점의 저장소의 ‘스냅샷’을 찍어, 프로젝트의 이전부터 현재까지 사이에서 복원, 재평가 등을 할 수 있는 체크포인트(ID)를 생성한다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;message&quot;&lt;/code&gt;&lt;br /&gt;
+“메세지”에는 commit할 때의 상태, 수정사항 등을 기입한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-push&quot;&gt;git push&lt;/h4&gt;
+
+&lt;p&gt;github 저장소에 올려주는 명령어. push까지 하면 github에서 볼 수 있다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin [branch name]&lt;/code&gt; // 보통은 master&lt;/p&gt;
+
+&lt;h4 id=&quot;git-push-강제로-하기&quot;&gt;git push 강제로 하기&lt;/h4&gt;
+
+&lt;p&gt;github 블로그를 만들면서 자꾸 push가 안 먹어서 강제로 올렸더니 잘 돌아간다.&lt;br /&gt;
+문제 될 게 안 보이는데 push를 해도 error, hint~ 이런 게 뜨면 아래의 명령어로 시도해보시길.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin +[branch name]&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin [branch name] -f&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;git-checkout&quot;&gt;git checkout&lt;/h4&gt;
+
+&lt;p&gt;checkout 뒤에 오는 브랜치로 head를 옮기는 명령어이다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout [branch name]&lt;/code&gt;&lt;br /&gt;
+ex) git checkout betty&lt;br /&gt;
+// 원래의 branch가 master였다면 betty라는 branch로 옮긴 것이다.&lt;/p&gt;
+
+&lt;h4 id=&quot;fork-git-clone&quot;&gt;fork, git clone&lt;/h4&gt;
+
+&lt;p&gt;원격 저장소에서 원격 저장소로 복사해올 때 fork,&lt;br /&gt;
+원격 저장소에서 로컬 저장소로 복사해올 때 clone이라 한다.&lt;br /&gt;
+fork는 github 우측 상단에 ‘fork’ 버튼이 있다. 누르고 복사한 저장소를 보관할 계정 선택하면 끝.&lt;br /&gt;
+clone해오면 그 저장소의 이름을 가진 디렉토리가 생성된다. 초반에 잘 몰라서 디렉토리를 만들어놓고 clone을 하곤&lt;br /&gt;했는데 [betty directory] &amp;gt; [betty directory]가 되서 한 번에 끝날 일을 번거롭게 만들곤 했다. 그래서 더 기억에 남음.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone [repository 주소]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;git-status&quot;&gt;git status&lt;/h4&gt;
+
+&lt;p&gt;현재 git 저장소의 상태를 체크한다. 변경사항이 있는지, staging area에 어떤 파일, 디렉토리가 올라갔는지, 어떤 브랜치에서 작업하고 있는지 확인할 수 있다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;git-log&quot;&gt;git log&lt;/h4&gt;
+
+&lt;p&gt;commit 내역을 확인 할 수 있다. 그리고 commit id(체크 포인트)가 나와서 특정 위치의 커밋으로 되돌아 가야할 때 유용하다. commit message를 보고 확인할 수 있기 때문에 commit 대충 써서 올린 사람은 피 본다. 왠만하면 시간이 흐른 뒤에 봐도 기억할 수 있게 적어라.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt;&lt;br /&gt;
+git log를 종료할 땐 ‘q’ press.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-diff&quot;&gt;git diff&lt;/h4&gt;
+
+&lt;p&gt;현재 unstaged 된 수정사항을 확인할 수 있다.&lt;br /&gt;
+이것저것 옵션들이 있던데 아직 쓴 적도 없고 필요성을 못 느껴서 패스.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;git-merge&quot;&gt;git merge&lt;/h4&gt;
+
+&lt;p&gt;branch들을 합칠 때 사용한다. 보통 master branch에 합치기 때문에&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git merge [merge할 branch name]&lt;/code&gt;
+이 순서로 사용한다.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 11 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/blog/github/programming/2018/12/11/git-guide.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/github/programming/2018/12/11/git-guide.html</guid>
+        
+        
+        <category>github</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>이 Pre가 그 Pre가 아닌가? [CodeStates Pre코스 경험기]</title>
+        <description>&lt;p&gt;이 포스팅은 내가 경험한 &lt;strong&gt;Code States Pre코스&lt;/strong&gt;에 대해 정리하는 글이다.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;왜-왜-안-되는데-니가-못하는-거-아니야&quot;&gt;“왜? 왜 안 되는데? 니가 못하는 거 아니야?”&lt;/h2&gt;
+
+&lt;p&gt;먼저 내 소개를 간단히 하면 뭐 하나 경력이라 할 것도 없고, 전문적이다 할 수 있는 것도 없는 사람이다. 고등학교 땐 귀금속공예 전공하고, 대학교 땐 식품영양학과를 전공하고(현재는 중퇴), 구관인형 만드는 아르바이트를 했다가 마사지사도 됐었고, 사람에 이래저래 데어서 서비스직 말고 다른 일을 하고 싶다는 생각에 웹디자이너가 됐었다.&lt;/p&gt;
+
+&lt;p&gt;운이 좋았던 건지 나빴던 건지 워낙 작은 회사다 보니 웹디자이너로 들어가서 참 많은 일을 경험했는데 디자인은 기본이고 기획서를 쓰고, 동적 웹페이지를 만들라는 주문에 jQuery를 이용해서 코딩도 했다. 그런데 문제는 월급이며, 대우며 나는 그냥 &lt;em&gt;잡일꾼&lt;/em&gt;인데 포지션 자체가 개발자로 들어온 사람은 같은 말을 해도 바로 인정, 내가 한 말은 “왜? 왜 안 되는데? 니가 못하는 거 아니야?” 라는 식의 대답을 들어야 했다.&lt;/p&gt;
+
+&lt;p&gt;이런 부분이 나에겐 꽤나 큰 상처로 다가왔지만 그 환경을 바꿀 용기가 없었다. 갑자기 수입이 없어지면 생활은 어떻게 할 것이며, 가족들이 집에서 공부한다고 하면 가만있지 않을텐데…이직을 못하면 어떡하나…등 전혀 만족스럽지 않은 현실을 그저 버틸 뿐이었다.&lt;/p&gt;
+
+&lt;p&gt;그러다 만난 현재의 남자친구가 내 생각을 많이 바꿔놓았다. 내가 꿈꾸던 프로그래머의 삶을 살고 있기 때문이었다. 가족들과 회사에서 인정받고, 하고싶은 일을 하며 전문적으로 자신의 분야에 대해 정말 잘 알고있는 사람이었다.(사실 지금도 머리가 컴퓨터로 되어 있지 않을까 싶다.)&lt;br /&gt;
+많은 얘기를 나누고 프로그래머로서의 생활, 회사에서의 일화를 들으면서 나도 저렇게 하고 싶다. 정말 지금의 삶을 변화시키고 싶다 생각하게 만들었고, 나도 할거야!!나도 할 수 있어!!라는 결심으로 바꿔놓았다.&lt;/p&gt;
+
+&lt;p&gt;그렇게 패기롭게 회사를 그만두고 나와서 고시원에 들어간 뒤 한달…멘붕이 왔다. &lt;br /&gt;
+‘생활코딩’을 포함해서 여러 블로그, 사이트, 도서 등 프로그래밍을 배우려고 그렇게 노력했는데 풀리는 것보다 안 풀리는 것이 많았다.
+프로그래머가 되고자 퇴사하고 혼자 독하게 공부하겠답시고 고시원까지 들어갔는데 이 상태를 한 달 넘게 유지를 하고 있으니 미치고 팔짝 뛸 노릇이었다.
+그러다 남자친구의 추천을 받아 알게 된 곳이 &lt;strong&gt;Code States&lt;/strong&gt;였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;뭘-모르는지-얘기해봐&quot;&gt;“뭘 모르는지 얘기해봐”&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;나만의 웹, 앱 서비스를 만들고 싶은 사람들, 소프트웨어 엔지니어가 되고 싶은 사람들이 프로그래밍을 공부하겠다고 마음먹습니다.
+온라인에 수많은 자료들이 있지만, 어디서부터 어떻게 공부해야할지 막막합니다.
+이것저것 시도해보지만, 얼마 지나지 않아 지치고 포기하는 경우가 많습니다.
+이 과정을 반복하는 이유는, “무엇을 모르는지 모르는 상태”이기 때문입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Code States Pre 과정 소개 일부 발췌&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;가장 공감됐던 부분! &lt;strong&gt;무엇을 모르는지 모르는 상태!&lt;/strong&gt;&lt;br /&gt;
+겪어본 사람들은 이 경험이 얼마나 끔찍하고 답답한지 공감할 것이다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;그래서 코드스테이츠는 수강생들을
+“무엇을 모르는지 모르는 상태”에서 “무엇을 모르는지 아는 상태”로 만들고자 합니다.
+컴퓨터처럼 생각하는 방법을 기르고, 최종적으로 스스로 공부하는 과정을 통해
+프로그래밍적인 사고를 요구하는 모든 작업에 자신감을 갖게 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Code States Pre 과정 소개 일부 발췌&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;사실 그렇게 여유로운 상황은 아니었지만 ‘&lt;strong&gt;“무엇을 모르는지 모르는 상태”&lt;/strong&gt;에서 &lt;strong&gt;“무엇을 모르는지 아는 상태”&lt;/strong&gt;로 만들고자 합니다.’ 이 글귀가 나에게 와닿았다.&lt;br /&gt;
+이번이 정말 프로그래머가 되겠다는 내 꿈을 이룰 마지막 기회다 생각하고 등록했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;이렇게-1년만-하면-정말-뭐든-할-수-있을-것-같아&quot;&gt;“이렇게 1년만 하면 정말 뭐든 할 수 있을 것 같아”&lt;/h2&gt;
+
+&lt;p&gt;Pre 코스는 8주 과정이고 이 다음 코스인 Immersive는 12주 과정이다. 그리고 나는 돈이 없는 백수기 때문에 취업까지의 기간을 최소로 해야했다. 그래서 Pre코스는 조기수료를 하고 12월 말에 개강하는 Immersive를 들어가는 것으로 목표로 했는데 그러기 위해선 계속 채찍질할 수 있는 환경이 필요했다.&lt;br /&gt;
+다행히 원래 있던 고시원 기간이 거의 끝나는 시기였고 CodeStates 내에서 공부할 수 있어서(10명 제한) 그 근처로 이사를 왔다. 그리고 아침 9시에서 아무리 못해도 저녁 10시까지 프로그래밍 공부만 하는 것을 목표로 했다. 정말 열심히 하시는 Immersive 수강생분들을 보며 나 스스로 마음도 다잡고 내가 원하는 바를 이루기 위해선 공부할 수 밖에 없었다.&lt;br /&gt;
+Pre코스를 수료하기 위해선 과제를 6개, Self Assessments(수료 전 시험같은 과제) 2회를 제출해야하고 과제들을 풀기 위해서는 JavaScript를 기초부터 탄탄히 해야한다.&lt;br /&gt;
+그래서 하루의 몇 시간은 기초 공부, 나머지 시간은 과제 이런 식으로 매일을 보냈다.&lt;br /&gt;
+거기에 플러스! 화, 목마다 있는 Live Session과 질의응답 시간도 항상 참여하려고 노력했다.&lt;br /&gt;
+그리고 여기서의 커리큘럼 중 가장 맘에 드는 것이 토요일마다 있는 Pair Programming이었는데 랜덤으로 Pair를 정해주고(보통은 같이 앉는 사람들끼리) 제공되는 알고리즘 문제를 함께 푸는 것이었다. 일정 시간이 지나고 나면 각 팀마다 어떻게 풀었는지 발표하는 시간을 갖는다. 같은 문제에 대해 더 깔끔한 코드, 더 효율적인 코드를 공유할 수 있어 좋은 시간이었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;이-pre가-그-pre가-아닌가벼&quot;&gt;“이 Pre가 그 Pre가 아닌가벼”&lt;/h2&gt;
+
+&lt;p&gt;Pre: ‘미리’의 뜻을 나타냄&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;naver 영한사전 발췌&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;비전공자도 할 수 있다하고 회사다니면서도 할 수 있다고 하니 쉽게 따라갈 수 있겠지?라고 생각한다면 경기도 오산이다.&lt;br /&gt;
+특히 프로그래머로의 이직을 생각한다면 더더욱 쉽게 보지마라.&lt;br /&gt;
+this, Recursion, Scope, Closure, Callback 등 그 지식만으로도 어려운데 그걸 이용해서 문제를 풀 수 있어야 한다.&lt;br /&gt;
+진지하게 고민해보자. 현재 프로그래머를 목표로 취업 준비하는 사람들은 2~4년동안 전공을 했거나 여기에 대해 깊은 이해가 있는 사람들이 대부분일 것이다. 그런데 8주, 12주 해서 그런 사람들을 제치고 회사에서 나를 선택하게 해야한다.&lt;br /&gt;그럼 그 만큼의 노력과 그 만큼의 결과물이 있어야하는 게 당연한 것 아닌가? 마음 다잡고 Pre 코스 들어가기 전 사전학습 꼭 하고 오길! 그리고 Q&amp;amp;A 게시판인 &lt;strong&gt;piazza&lt;/strong&gt;라는 커뮤니티가 있는데 질문도 많이하고, 답변도 많이 하는 것을 강추한다. 질문하면서 질문하는 방법을 알게되고, 답변하면서 어느 부분을 헷갈려하는지 알 수 있다.&lt;br /&gt;
+코딩 부트캠프라는 이름에 걸맞게 단기간에 JavaScript 기초를 탄탄히 하고 싶다면 &lt;strong&gt;Code States&lt;/strong&gt;로 가시길~!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Code States&lt;/strong&gt;: &lt;a href=&quot;https://www.codestates.com&quot;&gt;https://www.codestates.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe style=&quot;width:100%;&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/VEGH1qezFdQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 10 Dec 2018 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/blog/codestates/programming/bootcamp/2018/12/10/CodeStates-Experience.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/codestates/programming/bootcamp/2018/12/10/CodeStates-Experience.html</guid>
+        
+        
+        <category>codestates</category>
+        
+        <category>programming</category>
+        
+        <category>BootCamp</category>
+        
+      </item>
+    
+  </channel>
+</rss>
