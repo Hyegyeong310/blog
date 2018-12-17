@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 p-5 align-self-center text-center">
-                        <!-- {% assign tags_list = site.categories %}
+                        {% assign tags_list = site.categories %}
                         {% if tags_list.first[0] == null %}
                         {% for tag in tags_list %}
                         <a href="{{ site.baseurl }}/category/{{ tag }}">{{ tag | capitalize }} {{
@@ -146,12 +146,7 @@
                             }})</a>
                         {% endfor %}
                         {% endif %}
-                        {% assign tags_list = nil %} -->
-                        {% for category in site.categories %}
-                        <a href="{{ site.baseurl }}/{{ site.category_dir }}#{{ category | first }}">
-                            {{ category | first }} ({{ category | last | size }})
-                        </a>
-                        {% endfor %}
+                        {% assign tags_list = nil %}
                     </div>
                 </div>
             </div>
