@@ -2,7 +2,7 @@
 layout: post
 title: "[JS-Basic] Memoization"
 author: HyeGyeong
-categories: [Memoization, JS-Basic]
+categories: [JS-Basic]
 image: "assets/images/7.jpeg"
 ---
 
