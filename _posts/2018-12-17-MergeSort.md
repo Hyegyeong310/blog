@@ -2,7 +2,7 @@
 layout: post
 title: "[Sorts] Merge Sort"
 author: HyeGyeong
-categories: [Sorts]
+category: Sorts
 image: "assets/images/12.png"
 ---
 

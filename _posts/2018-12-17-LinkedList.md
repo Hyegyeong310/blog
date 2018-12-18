@@ -2,7 +2,7 @@
 layout: post
 title: "[Data Structure] LinkedList"
 author: HyeGyeong
-categories: [dataStructure]
+category: dataStructure
 image: "assets/images/5.jpeg"
 ---
 

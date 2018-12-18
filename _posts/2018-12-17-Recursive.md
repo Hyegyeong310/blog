@@ -2,7 +2,7 @@
 layout: post
 title: "[JS-Basic] Recursive Function"
 author: HyeGyeong
-categories: [JS-Basic]
+category: JS-Basic
 image: "assets/images/8.jpeg"
 ---
 

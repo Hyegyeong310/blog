@@ -2,7 +2,7 @@
 layout: post
 title: "[Sorts] Quick Sort"
 author: HyeGyeong
-categories: [Sorts]
+category: Sorts
 image: "assets/images/13_1.jpg"
 ---
 

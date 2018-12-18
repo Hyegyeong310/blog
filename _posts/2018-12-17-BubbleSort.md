@@ -2,7 +2,7 @@
 layout: post
 title: "[Sorts] Bubble Sort"
 author: HyeGyeong
-categories: [Sorts]
+category: Sorts
 image: "assets/images/11.jpeg"
 ---
 

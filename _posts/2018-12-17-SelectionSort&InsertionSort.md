@@ -2,7 +2,7 @@
 layout: post
 title: "[Sorts] Selection Sort & Insertion Sort"
 author: HyeGyeong
-categories: [Sorts]
+category: Sorts
 image: "assets/images/10.jpeg"
 ---
 

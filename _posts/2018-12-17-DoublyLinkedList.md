@@ -2,7 +2,7 @@
 layout: post
 title: "[Data Structure] Doubly Linked List"
 author: HyeGyeong
-categories: [dataStructure]
+category: dataStructure
 image: "assets/images/6.jpeg"
 ---
 
