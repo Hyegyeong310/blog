@@ -2,7 +2,8 @@
 layout: post
 title: "이 Pre가 그 Pre가 아닌가? [CodeStates Pre코스 경험기]"
 author: HyeGyeong
-categories: [codestates, programming, bootcamp]
+# categories: [codestates, programming, bootcamp]
+category: codestates
 image: "assets/images/18.jpg"
 ---
 
