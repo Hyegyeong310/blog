@@ -2,7 +2,7 @@
 layout: post
 title: "[Data Structure] ArrayList"
 author: HyeGyeong
-categories: [ArrayList, 자료구조]
+categories: [dataStructure]
 image: "assets/images/4.jpeg"
 ---
 
