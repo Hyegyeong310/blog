@@ -17,7 +17,7 @@ LinkedList는 요소 사이를 링크로 이어주기만 하면 되기 때문에
 하지만 검색을 하는 경우 각 요소가 다음 요소만을 알고 있기 때문에 모든 요소를 훑어 올라가야한다.
 마지막 요소를 검색해야 하는 경우 첫번째 요소부터 마지막 요소까지 봐야하기 때문에 이 경우가 최악의 경우이다.
 그러므로 검색이 별로 없고 추가/삭제를 많이 하는 경우 사용하면 좋다.
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2939.png"></img>
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2939.png" />
 
 > (출처: 생활코딩)
 
@@ -25,10 +25,10 @@ LinkedList는 요소 사이를 링크로 이어주기만 하면 되기 때문에
 
 ### 2.1 데이터의 추가
 
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2922.png"></img>
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2923.png"></img>
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2924.png"></img>
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2926.png"></img>
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2922.png" />
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2923.png" />
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2924.png" />
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2926.png" />
 
 > (출처: 생활코딩)
 

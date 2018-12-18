@@ -25,7 +25,7 @@ image: "assets/images/12.png"
 
 > (출처: 위키백과)
 
-<img src="https://gmlwjd9405.github.io/images/algorithm-merge-sort/merge-sort-concepts.png"></br>
+<img src="https://gmlwjd9405.github.io/images/algorithm-merge-sort/merge-sort-concepts.png">
 
 > (출처: Heee's Development Blog)
 

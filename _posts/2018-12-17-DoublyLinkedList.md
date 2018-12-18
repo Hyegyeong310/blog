@@ -198,7 +198,7 @@ doublyLinkedList.prototype.indexOf = function(data) {
 
 ### 2.4 데이터 reverse
 
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2968.png"></br>
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2968.png" />
 
 > (출처: 생활코딩)
 > LinkedList는 데이터 reverse를 하려면 next의 위치를 반대로 바꿔야했다. DoublyLinkedList는 양방향 탐색이 가능해서 prev를 이용하면 된다.<br/>
