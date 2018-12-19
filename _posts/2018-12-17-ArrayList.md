@@ -2,7 +2,7 @@
 layout: post
 title: "[Data Structure] ArrayList"
 author: HyeGyeong
-categories: [dataStructure]
+category: dataStructure
 image: "assets/images/4.jpeg"
 ---
 
@@ -17,7 +17,7 @@ image: "assets/images/4.jpeg"
 
 ### 2.1 데이터의 추가
 
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2886.png"></img>
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2886.png" />
 
 > (출처: 생활코딩)
 
@@ -52,7 +52,7 @@ List.prototype.addLast = function(element) {
 
 ### 2.2 데이터의 삭제
 
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2887.png"></img>
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2887.png" />
 
 > (출처: 생활코딩)
 
@@ -77,7 +77,7 @@ List.prototype.remove = function(index) {
 ### 2.3 데이터 가져오기
 
 <code>numbers.get(2);</code><br/>
-<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2891.png"></img>
+<img src="https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/1335/2891.png" />
 
 > (출처: 생활코딩)
 

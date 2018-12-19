@@ -2,7 +2,7 @@
 layout: post
 title: "[Sorts] Binary Search"
 author: HyeGyeong
-categories: [Sorts]
+category: Sorts
 image: "assets/images/9.jpeg"
 ---
 
