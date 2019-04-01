@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Sorts] Merge Sort"
+title: '[Sorts] Merge Sort'
 author: HyeGyeong
-category: Sorts
-image: "assets/images/12.png"
+categories: [Sorts]
+image: 'assets/images/12.png'
 ---
 
 # Merge Sort

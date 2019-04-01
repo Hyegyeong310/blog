@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[JS-Basic] Recursive Function"
+title: '[JS-Basic] Recursive Function'
 author: HyeGyeong
-category: JS-Basic
-image: "assets/images/8.jpeg"
+categories: [JS-Basic]
+image: 'assets/images/8.jpeg'
 ---
 
 # Recursive Function

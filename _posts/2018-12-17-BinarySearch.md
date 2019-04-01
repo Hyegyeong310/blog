@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Sorts] Binary Search"
+title: '[Sorts] Binary Search'
 author: HyeGyeong
-category: Sorts
-image: "assets/images/9.jpeg"
+categories: [Sorts]
+image: 'assets/images/9.jpeg'
 ---
 
 # Binary Search

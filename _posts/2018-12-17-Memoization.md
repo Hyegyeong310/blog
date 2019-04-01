@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[JS-Basic] Memoization"
+title: '[JS-Basic] Memoization'
 author: HyeGyeong
-category: JS-Basic
-image: "assets/images/7.jpeg"
+categories: [JS-Basic]
+image: 'assets/images/7.jpeg'
 ---
 
 # Memoization

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Sorts] Bubble Sort"
+title: '[Sorts] Bubble Sort'
 author: HyeGyeong
-category: Sorts
-image: "assets/images/11.jpeg"
+categories: [Sorts]
+image: 'assets/images/11.jpeg'
 ---
 
 # Bubble Sort

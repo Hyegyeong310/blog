@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Sorts] Quick Sort"
+title: '[Sorts] Quick Sort'
 author: HyeGyeong
-category: Sorts
-image: "assets/images/13_1.jpg"
+categories: [Sorts]
+image: 'assets/images/13_1.jpg'
 ---
 
 # Quick Sort

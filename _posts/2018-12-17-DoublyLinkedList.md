@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Data Structure] Doubly Linked List"
+title: '[Data Structure] Doubly Linked List'
 author: HyeGyeong
-category: dataStructure
-image: "assets/images/6.jpeg"
+categories: [dataStructure]
+image: 'assets/images/6.jpeg'
 ---
 
 # DoublyLinkedList

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Data Structure] ArrayList"
+title: '[Data Structure] ArrayList'
 author: HyeGyeong
-category: dataStructure
-image: "assets/images/4.jpeg"
+categories: [dataStructure]
+image: 'assets/images/4.jpeg'
 ---
 
 # ArrayList

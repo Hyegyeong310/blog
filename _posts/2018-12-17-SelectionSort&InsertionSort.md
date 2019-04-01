@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Sorts] Selection Sort & Insertion Sort"
+title: '[Sorts] Selection Sort & Insertion Sort'
 author: HyeGyeong
-category: Sorts
-image: "assets/images/10.jpeg"
+categories: [Sorts]
+image: 'assets/images/10.jpeg'
 ---
 
 # Selection Sort

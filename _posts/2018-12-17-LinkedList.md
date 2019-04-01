@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Data Structure] LinkedList"
+title: '[Data Structure] LinkedList'
 author: HyeGyeong
-category: dataStructure
-image: "assets/images/5.jpeg"
+categories: [dataStructure]
+image: 'assets/images/5.jpeg'
 ---
 
 # LinkedList

@@ -8,6 +8,8 @@ favicon: 'assets/images/logo.png'
 baseurl: '/blog'
 google_analytics: 'UA-126652686-2'
 disqus: 'hyegyeong310'
+include: ['_pages']
+permalink: /:title/
 # mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
 # Authors
@@ -47,6 +49,8 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 disqus-shortname: hyegyeong310
