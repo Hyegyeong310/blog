@@ -2,7 +2,7 @@
 layout: post
 title: 'Sequelize로 RDS 연결'
 author: HyeGyeong
-categories: [2weeks-project, AWS, RDS]
+categories: [2weeks-project, rds]
 image: 'assets/images/AWS-Feature.png'
 ---
 
