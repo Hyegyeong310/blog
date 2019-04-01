@@ -41,5 +41,5 @@ module.export = db;
 ## EC2, RDS connect
 
 - 저번 주 토요일까지는 잘 됐는데 오늘 갑자기 안 됌.
-- EC2 보안그룹 문제.
+- **EC2 보안그룹 문제.**
 - EC2와 RDS(VPC 보안 그룹) 서로 연결 확인해야 함.
