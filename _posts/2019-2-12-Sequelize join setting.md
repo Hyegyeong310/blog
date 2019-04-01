@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Sequelize join table setting'
+title: 'S3로 file upload'
 author: HyeGyeong
 categories: [2weeks-project, S3, rds]
 image: 'assets/images/react-s3.png'
