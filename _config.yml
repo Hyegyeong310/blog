@@ -10,7 +10,6 @@ google_analytics: 'UA-126652686-2'
 disqus: 'hyegyeong310'
 include: ['_pages']
 permalink: /:title/
-url: https://hyegyeong310.github.io/blog/
 # mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
 # Authors
