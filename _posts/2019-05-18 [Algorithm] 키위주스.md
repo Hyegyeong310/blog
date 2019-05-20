@@ -63,7 +63,7 @@ Returns: [0, 156956, 900000, 856956]
 2. i번째 병의 용량은 capacities[i].
 3. i번째 주스 양은 bottles[i].
 4. fromId[i]병에서 toId[i]병으로 붓는다.
-5. fromId[i]병이 비거나 toId[i]가 꽉차면 붓는 행동을 중단한다.
+5. fromId[i]병이 비거나 toId[i]가 꽉차면 붓는 행동을 멈춘다.
 6. return 값은 각각 i번째 병에 남은 주스 양의 배열이다.
 
       <br/>
