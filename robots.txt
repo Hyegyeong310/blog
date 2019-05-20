@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://hyegyeong310.github.io/blog/sitemap.xml

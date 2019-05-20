@@ -3,7 +3,7 @@ name: "HyeGyeong's Blog"
 title: "HyeGyeong's Blog"
 description: '프로그래밍 공부 정리용 블로그'
 meta_description: ''
-logo: 'assets/images/logo.png'
+logo: 'assets/images/GitHub-Mark-120px-plus.png.png'
 favicon: 'assets/images/GitHub-Mark-120px-plus.png'
 baseurl: '/blog'
 google_analytics: 'UA-126652686-2'
