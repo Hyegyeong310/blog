@@ -25,7 +25,7 @@ sitemap:
   - frameguard는 X-Frame-Options 헤더를 설정하여 clickjacking에 대한 보호를 제공한다.
   - xssFilter: X-XSS-Protection을 설정하여 대부분의 최신 웹 브라우저에서 XSS(Cross-site scripting) 필터를 사용하도록 한다.
 
-  > [express 프로덕션 우수 사례: 보안](https://expressjs.com/ko/advanced/best-practice-security.html)
+  > > [express 프로덕션 우수 사례: 보안](https://expressjs.com/ko/advanced/best-practice-security.html)
 
 - 설치
   `npm install helmet`
@@ -45,4 +45,4 @@ app.use(helmet());
 app.get('/', handleIndex);
 ```
 
-### 몇 가지 잘 알려진 웹 취약성으로부터 앱을 보호할 수 있기 때문에 잘 모르더라도 사용하는 버릇을 들이면 좋다.
+#### 몇 가지 잘 알려진 웹 취약성으로부터 앱을 보호할 수 있기 때문에 잘 모르더라도 사용하는 버릇을 들이면 좋다.
