@@ -47,3 +47,16 @@ app.get('/', handleIndex);
 ```
 
 와 같이 할 수 있다. Javascript는 위에서 아래로 진행하는 스크립트 언어기 때문에 **순서 중요!!!**
+
+- Middleware에서 res.send를 실행하면 연결을 끊을 수 있다.
+
+```js
+const handleIndex = (req, res) => res.send('Hello, This is Index');
+const betweenIndex = (req, res, next) => {
+  res.send('This is betweenIndex');
+};
+
+app.get('/', betweenIndex, handleIndex);
+```
+
+- 위와 같이 route 전에 res.send를 실행하는 middleware를 넣으면 연결이 끊겨서 `handleIndex` 함수를 실행할 수 없다. next를 실행하지 않으면 최종 실행 함수와 같아진다. **res.send를 middleware에 사용할 땐 주의할 것!**
