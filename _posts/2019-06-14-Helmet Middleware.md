@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[NodeJS] Helmet Middlewares'
+title: '[NodeJS] Helmet Middleware'
 author: HyeGyeong
 categories: [NodeJS, Express]
 image: 'assets/images/express.png'
