@@ -3,7 +3,7 @@ layout: post
 title: '[NodeJS] path module (__filename, __dirname)'
 author: HyeGyeong
 categories: [Express, NodeJS]
-image: 'assets/images/express.jpeg'
+image: 'assets/images/express.png'
 sitemap:
   changefreq: daily
   priority: 1.0
