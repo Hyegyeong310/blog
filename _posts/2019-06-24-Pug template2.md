@@ -14,7 +14,7 @@ sitemap:
 #### Layouts
 
 - html을 사용하면서 불편한 점은 header, footer 등 반복되는 부분을 복사-붙여넣기 등으로 계속 써야한다는 건데, pug를 이용하면 반복되는 부분을 따로 빼서 include 시킬 수 있다. 함수처럼 한 번 정의해두면 여러 곳에서 불러서 사용할 수 있어서 관리가 수월하다.
-  ![image](https://user-images.githubusercontent.com/25483027/59974163-bc40f800-95e3-11e9-9b5b-5c245243e2a9.png)
+- ![image](https://user-images.githubusercontent.com/25483027/59974163-bc40f800-95e3-11e9-9b5b-5c245243e2a9.png)
 - 모든 페이지는 header, footer, HTML head, HTML body, css link 등을 필요로 한다. views/layouts의 main은 필요한 html 요소들을 가지고 있는 기본 틀이 되는 파일이다.
 
 ```pug
