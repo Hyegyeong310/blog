@@ -2,7 +2,7 @@
 layout: post
 title: '[Algorithm] 키위주스'
 author: HyeGyeong
-categories: [Algorithm]
+categories: [algorithm]
 image: 'assets/images/kiwi_juice.jpeg'
 ---
 
