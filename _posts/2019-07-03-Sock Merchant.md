@@ -51,7 +51,7 @@ Return the total number of matching pairs of socks that John can sell.
 
 #### Explanation
 
-![image](https://user-images.githubusercontent.com/25483027/60596907-e44f0900-9de4-11e9-8684-6b0a62bca1c9.png)
+![image](https://user-images.githubusercontent.com/25483027/60596907-e44f0900-9de4-11e9-8684-6b0a62bca1c9.png)  
 John can match three pairs of socks.
 
 ## Solve
