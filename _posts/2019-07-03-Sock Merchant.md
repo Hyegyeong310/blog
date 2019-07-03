@@ -76,3 +76,5 @@ function sockMerchant(n, ar) {
   return count;
 }
 ```
+
+> [출처: [https://www.hackerrank.com](https://www.hackerrank.com)]
