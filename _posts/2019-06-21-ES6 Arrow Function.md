@@ -45,7 +45,7 @@ const add = (x, y) => {
 
 ## 화살표 함수의 this 바인드
 
-- [일반 함수의 this](https://hyegyeong310.github.io/blog/this/)
+- [일반 함수의 this](https://blog.hyegyeong.com/this/)
 - 화살표 함수의 this는 자신만의 `this`를 생성하지 않는다.
 
 ```js
