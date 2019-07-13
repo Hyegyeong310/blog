@@ -5,7 +5,7 @@ description: '프로그래밍 공부, 독서, 취미 블로그'
 meta_description: ''
 logo: 'assets/images/GitHub-Mark-120px-plus.png.png'
 favicon: 'assets/images/GitHub-Mark-120px-plus.png'
-baseurl: '/blog'
+# baseurl: '/blog'
 google_analytics: 'UA-126652686-2'
 disqus: 'hyegyeong310'
 include: ['_pages']
