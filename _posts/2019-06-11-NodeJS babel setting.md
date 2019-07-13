@@ -12,7 +12,7 @@ sitemap:
 ## What is [Babel](https://babeljs.io/)?
 
 - 최신의 Javascript(ES6 이상)를 예전(표준으로 볼 수 있는) Javascript 코드로 변환해줌. 구형 브라우저(IE같은...)에서는 최신 Javascript를 지원하지 않기 때문에 babel을 이용하여 대부분의 브라우저에서 호환되도록 바꿔야 함.
-  ![walking]({{ site.baseurl }}/assets/images/babel_example.png "What is babel?")
+  ![walking](/assets/images/babel_example.png 'What is babel?')
 
 ## Babel은 여러 Loader가 있는데 현재는 babel node 이용.
 

@@ -40,4 +40,4 @@ const Op = Sequelize.Op
 
 ## git 그룹 협업 사용 방법
 
-![walking]({{ site.baseurl }}/assets/images/git_work_flow.png)
+![walking](/assets/images/git_work_flow.png)
