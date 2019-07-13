@@ -23,11 +23,11 @@
       crossorigin="anonymous"
     />
 
-    <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet" />
+    <link href="/assets/css/screen.css" rel="stylesheet" />
 
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet" />
+    <link href="/assets/css/main.css" rel="stylesheet" />
 
-    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
   </head>
 
   {% if jekyll.environment == 'production' %}
@@ -109,7 +109,7 @@
 
             <li class="nav-item">
               {% endif %}
-              <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+              <a class="nav-link" href="/index.html">Blog</a>
             </li>
 
             <li class="nav-item">
@@ -208,17 +208,13 @@
             categories_list %}
             <a
               class="mt-1 mb-1"
-              href="{{
-                site.baseurl
-              }}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}"
+              href="/categories#{{ category | url_escape | strip | replace: ' ', '-' }}"
               >{{ category | camelcase }} ({{ site.tags[category].size }})</a
             >
             {% endfor %} {% else %} {% for category in categories_list %}
             <a
               class="mt-1 mb-1"
-              href="{{
-                site.baseurl
-              }}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"
+              href="/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"
               >{{ category[0] | camelcase }} ({{ category[1].size }})</a
             >
             {% endfor %} {% endif %} {% assign categories_list = nil %}
@@ -258,15 +254,13 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+    <script src="/assets/js/mediumish.js"></script>
 
     {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+    <script src="/assets/js/lazyload.js"></script>
     {% endif %}
 
-    <script src="{{
-        site.baseurl
-      }}/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 
     {% if page.layout == 'post' %}
     <script
