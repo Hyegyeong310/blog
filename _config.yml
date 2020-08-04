@@ -1,15 +1,15 @@
 # Site
 name: "HyeGyeong's Blog"
 title: "HyeGyeong's Blog"
-description: '프로그래밍 공부, 독서, 취미 블로그'
-meta_description: ''
-logo: 'assets/images/GitHub-Mark-120px-plus.png.png'
-favicon: 'assets/images/GitHub-Mark-120px-plus.png'
-# baseurl: '/blog'
-url: 'https://blog.hyegyeong.com/'
-google_analytics: 'UA-126652686-2'
-disqus: 'hyegyeong310'
-include: ['_pages']
+description: "프로그래밍 공부, 독서, 취미 블로그"
+meta_description: ""
+logo: "assets/images/GitHub-Mark-120px-plus.png.png"
+favicon: "assets/images/GitHub-Mark-120px-plus.png"
+baseurl: "/blog"
+# url: 'https://blog.hyegyeong.com/'
+google_analytics: "UA-126652686-2"
+disqus: "hyegyeong310"
+include: ["_pages"]
 permalink: /:title/
 # mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
@@ -20,10 +20,10 @@ authors:
     display_name: HyeGyeong
     gravatar: abadf03e00c5589f7e1929e4e7807c07
     email: hyegyeong310@gmail.com
-    web: https://blog.hyegyeong.com/
+    web: https://hyegyeong310.github.io/blog/
     git: https://github.com/Hyegyeong310
-    twitter: '' # https://twitter.com/wowthemesnet
-    description: '프로그래머를 꿈꾸며 JavaScript 공부 중'
+    twitter: "" # https://twitter.com/wowthemesnet
+    description: "프로그래머를 꿈꾸며 JavaScript 공부 중"
 
 # Plugins
 plugins:
@@ -39,7 +39,7 @@ jekyll-archives:
     - categories
   layout: archive
   permalinks:
-    category: '/category/:name/'
+    category: "/category/:name/"
 
 # Pagination
 paginate: 6

@@ -47,7 +47,7 @@ footer
 
 1. 템플릿 전체에 전달 (middleware를 이용하여 local 변수 설정)
 
-- [Middleware 포스팅 바로가기](https://blog.hyegyeong.com/Express-Middleware/)
+- [Middleware 포스팅 바로가기](https://hyegyeong310.github.io/blog/Express-Middleware/)
 
 ```js
 // app.js
