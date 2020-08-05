@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="icon" href="/assets/images/GitHub-Mark-120px-plus.png" />
+    <link rel="icon" href="/blog/assets/images/GitHub-Mark-120px-plus.png" />
 
     <title>{{ page.title }} | {{ site.name }}</title>
     <meta
@@ -23,11 +23,11 @@
       crossorigin="anonymous"
     />
 
-    <link href="/assets/css/screen.css" rel="stylesheet" />
+    <link href="/blog/assets/css/screen.css" rel="stylesheet" />
 
-    <link href="/assets/css/main.css" rel="stylesheet" />
+    <link href="/blog/assets/css/main.css" rel="stylesheet" />
 
-    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/blog/assets/js/jquery.min.js"></script>
   </head>
 
   {% if jekyll.environment == 'production' %}
@@ -207,13 +207,13 @@
             categories_list %}
             <a
               class="mt-1 mb-1"
-              href="/categories#{{ category | url_escape | strip | replace: ' ', '-' }}"
+              href="/blog/categories#{{ category | url_escape | strip | replace: ' ', '-' }}"
               >{{ category | camelcase }} ({{ site.tags[category].size }})</a
             >
             {% endfor %} {% else %} {% for category in categories_list %}
             <a
               class="mt-1 mb-1"
-              href="/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"
+              href="/blog/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"
               >{{ category[0] | camelcase }} ({{ category[1].size }})</a
             >
             {% endfor %} {% endif %} {% assign categories_list = nil %}
@@ -253,13 +253,13 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="/assets/js/mediumish.js"></script>
+    <script src="/blog/assets/js/mediumish.js"></script>
 
     {% if site.lazyimages == "enabled" %}
-    <script src="/assets/js/lazyload.js"></script>
+    <script src="/blog/assets/js/lazyload.js"></script>
     {% endif %}
 
-    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/blog/assets/js/ie10-viewport-bug-workaround.js"></script>
 
     {% if page.layout == 'post' %}
     <script
